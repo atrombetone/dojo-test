@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>
+    Produtos disponíveis
+  </mat-card-title>
+  <mat-card-content>
+    <ui-loading [isVisible]="showLoading"></ui-loading>
+    <div class="wrapper" *ngIf="!showLoading">
+      <div  *ngFor="let item of products">
+        {{item.productType}} - {{item.productName}}
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

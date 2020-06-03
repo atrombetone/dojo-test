@@ -12,6 +12,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { BranchesComponent } from './pages/branches/branches.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { BranchesComponent } from './pages/branches/branches.component';
     HomeComponent,
     EmployeesComponent,
     OrdersComponent,
-    BranchesComponent
+    BranchesComponent,
+    ProductsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,

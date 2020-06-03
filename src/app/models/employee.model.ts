@@ -1,4 +1,4 @@
 export interface EmployeeModel {
-    cpf: string,
-    name: string
+    cpf: string;
+    name: string;
 }
