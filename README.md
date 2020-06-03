@@ -6,14 +6,14 @@ O objetivo deste projeto é gerar insumo para aplicação em um DOJO de testes U
 
 ## WebServer de Desenvolvimento
 Etapas para montagem do ambiente:
-...$ git clone https://github.com/atrombetone/dojo-test.git
-...$ cd dojo-test
-...$ npm install
-...$ ng serve --open
+* ...$ git clone https://github.com/atrombetone/dojo-test.git
+* ...$ cd dojo-test
+* ...$ npm install
+* ...$ ng serve --open
 
 Abra um segundo terminal e acesse o dir
-...$ cd dojo-test/wiremock
-...$ ./run.sh
+* ...$ cd dojo-test/wiremock
+* ...$ ./run.sh
 
 Aguarde até que o Wiremock suba a API na porta 3002
 em seguida volte ao navegador na aplicação http://localhost:4200
