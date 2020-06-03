@@ -3,6 +3,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { MaterialModule } from './material-module';
 
 @Component({
   selector: 'app-root',

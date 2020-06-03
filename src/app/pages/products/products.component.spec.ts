@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '../../material-module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ProductsComponent } from './products.component';
+import { LoadingComponent } from './../../components/loading/loading.component';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -8,7 +12,15 @@ describe('ProductsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductsComponent ]
+      imports: [
+        MaterialModule,
+        BrowserAnimationsModule,
+        HttpClientModule
+      ],
+      declarations: [ 
+        ProductsComponent,
+        LoadingComponent 
+      ]
     })
     .compileComponents();
   }));

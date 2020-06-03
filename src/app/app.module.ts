@@ -32,13 +32,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
