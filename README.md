@@ -30,6 +30,9 @@ em seguida volte ao navegador na aplicação http://localhost:4200
 
 Execute o comando `ng test` para rodar os testes unitários via [Karma](https://karma-runner.github.io).
 
+Uma segunda opção para obter mais detalhes pode ser utilizado o comando `ng test --code-coverage`, dessa forma é gerado um diretório chamado `coverage` na raiz do projeto contendo um relatório detalhado em HTML mostrando o resultado da cobertura.
+
+
 ## Teste End To End (E2E)
 
 Execute o comando `ng e2e` para rodar os testes End To End via [Protractor](http://www.protractortest.org/).
