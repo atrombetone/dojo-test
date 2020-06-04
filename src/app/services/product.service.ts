@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { environment } from './../environments/environment';
-import { ProductModel } from './models/product.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
+import { ProductModel } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,10 @@ import { HttpClient } from '@angular/common/http';
 export class ProductService {
 
   url = `${environment.apiUrl}/${environment.apiVVerion}/product`
-  constructor(private _http: HttpClient) {
-    
-  }
+  
+  constructor(private httpClient: HttpClient) { }
 
   getProducts() : Observable<ProductModel[]> {
-    return this._http.get<ProductModel[]>(this.url);
+    return this.httpClient.get<ProductModel[]>(this.url);
   }
 }

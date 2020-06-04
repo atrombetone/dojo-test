@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ProductService } from 'src/app/product.service';
 import { Subscription } from 'rxjs';
+import { ProductService } from 'src/app/services/product.service';
 import { ProductModel } from 'src/app/models/product.model';
 
 @Component({
@@ -22,13 +22,9 @@ export class ProductsComponent implements OnInit, OnDestroy {
       data => {
         this.showLoading = false;
         this.products = data;
-      },
-      error => {
-        this.showLoading = false;
-        console.log("erro na requisição");
-      })
+      });
   }
-  
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

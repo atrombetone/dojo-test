@@ -11,15 +11,13 @@ import { MaterialModule } from './material-module';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dojo';
+  
   routerLinkActive: string;
+  
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
-
 }
