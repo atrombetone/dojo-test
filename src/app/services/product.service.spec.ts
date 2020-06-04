@@ -1,66 +1,43 @@
-import { TestBed, getTestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ProductService } from './product.service';
+import { ProductModel } from '../models/product.model';
 
 describe('ProductService', () => {
+
+  const MockHttpValidReturn = [
+    {
+      "productType": "100",
+      "productName": "Titulo de Capitalização"
+    },
+    {
+      "productType": "102",
+      "productName": "Previdência Privada"
+    }
+  ];
 
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       HttpClientTestingModule
-    ]
+    ],
+    providers: [{ provide: HttpTestingController, useClass: MockHttpValidReturn }]
   }));
-
-  // injector = getTestBed();
-  // httpMock = injector.get(HttpClient);
-  // const service: ProductService = TestBed.get(ProductService);
-
-  // afterEach(() => {
-  //   httpMock.verify();
-  // });
 
   it(`Dado que o serviço foi instanciado.`, () => {
     const service: ProductService = TestBed.get(ProductService);
     expect(service).toBeTruthy();
   });
 
-  describe('Conjunto para Teste de Sucesso', () => {
-
+  it(`Dado que a API de produtos está online.
+      Quando é requisitado a listagem de produtos
+      então uma lista contendo dois produtos é retornado`, () => {
     
-    it(`Dado que a API de produtos está online.
-        Quando é requisitado a listagem de produtos
-        então uma lista contendo dois produtos é retornado`, () => {
+    const service: ProductService = TestBed.get(ProductService);
 
-          const products = [
-            {
-              "productType": "100",
-              "productName": "Titulo de Capitalização"
-            },
-            {
-              "productType": "102",
-              "productName": "Previdência Privada"
-            }
-          ];
-
-          // service.getProducts().subscribe(data => {
-          //   expect(data.length).toBe(2);
-          //   expect(data).toEqual(products);
-          // });
-      
-          // const req = httpMock.expectOne(service.url);
-          // expect(req.request.method).toBe("GET");
-          // req.flush(products);
-  
-          // spyOn(HttpClient, 'get');
-          // http = TestBed.get(HttpClient, 'get');
-          // let response: any;
-          // let errResponse: any;
-          // const mockErrorResponse = { status: 400, statusText: 'Bad Request' };
-          // const data = 'Invalid request parameters';
-          // apiService.get(somePath).subscribe(res => response = res, err => errResponse = err);
-          // http.expectOne('url/being/monitored').flush(data, mockErrorResponse);
-          // expect(errResponse).toBe(data);
-  
+    service.getProducts().subscribe(dados => {
+      expect(dados).toBeTruthy();
+      expect(dados.length).toEqual(2);
+      expect(dados).toEqual(MockHttpValidReturn);
     });
   });
-
 });
