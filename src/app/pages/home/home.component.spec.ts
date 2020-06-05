@@ -27,7 +27,9 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it(`Dado que um componente de Home.
+      Quando instanciado 
+      então sua variável deve ser diferente de null.`, () => {
     expect(component).toBeTruthy();
   });
 });

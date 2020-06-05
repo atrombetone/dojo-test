@@ -5,11 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
-import { BenefitListComponent } from './pages/benefit-list/benefit-list.component';
 import { HomeComponent } from './pages/home/home.component';
-import { EmployeesComponent } from './pages/employees/employees.component';
-import { OrdersComponent } from './pages/orders/orders.component';
-import { BranchesComponent } from './pages/branches/branches.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
@@ -17,11 +13,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BenefitListComponent,
     HomeComponent,
-    EmployeesComponent,
-    OrdersComponent,
-    BranchesComponent,
     ProductsComponent,
     LoadingComponent
   ],

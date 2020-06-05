@@ -18,11 +18,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     this.showLoading = true;
-    this.subscription = this.service.getProducts().subscribe(
-      data => {
-        this.showLoading = false;
-        this.products = data;
-      });
+    this.subscription = this.service.getProducts().subscribe(data => {
+      this.showLoading = false;
+      this.products = data;
+    });
   }
 
   ngOnDestroy() {

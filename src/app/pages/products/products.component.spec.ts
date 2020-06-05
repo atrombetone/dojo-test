@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../../material-module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 
 import { ProductsComponent } from './products.component';
 import { LoadingComponent } from './../../components/loading/loading.component';
@@ -23,7 +24,6 @@ class ServiceMock {
     ]);
   }
 }
-
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -57,7 +57,9 @@ describe('ProductsComponent', () => {
   it(`Dado que a API de Produtos está operante. 
     Quando o serviço de listagem de Produto é chamado,
     então o componente renderiza a listagem dos produtos obtidos.`, () => {
+
+
       expect(2).toBe(component.products.length);
   });
-  
+
 });
