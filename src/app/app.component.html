@@ -1,15 +1,15 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" id="ui-menu">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Pedidos</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/home']" routerLinkActive="routerLinkActive" >
+      <a mat-list-item [routerLink]="['/home']" routerLinkActive="routerLinkActive" id="lnk-home">
         <span class="material-icons">
           home
         </span> Home</a>
-        <a mat-list-item [routerLink]="['/products']" routerLinkActive="routerLinkActive" >
+        <a mat-list-item [routerLink]="['/products']" routerLinkActive="routerLinkActive" id="lnk-products">
           <span class="material-icons">
             list
           </span> Products</a>

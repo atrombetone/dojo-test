@@ -5,7 +5,11 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
+  getApp() {
+    return element(by.css('app-root')).getText() as Promise<string>;
+  }
+
+  getAppVersion() {
+    return element(by.css('app-root')).getAttribute('ng-version') as Promise<string>
   }
 }
