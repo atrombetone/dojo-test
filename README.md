@@ -32,7 +32,7 @@ Execute o comando `ng test` para rodar os testes unitários via [Karma](https://
 
 Uma segunda opção para obter mais detalhes pode ser utilizado o comando `ng test --code-coverage`, dessa forma é gerado um diretório chamado `coverage` na raiz do projeto contendo um relatório detalhado em HTML mostrando o resultado da cobertura.
 
-<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/cobertura.png">
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/cobertura_13.png">
 
 ## Teste End To End (E2E)
 
