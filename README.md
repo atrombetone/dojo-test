@@ -47,4 +47,4 @@ Uma segunda opção para obter mais detalhes pode ser utilizado o comando `ng te
 
 Execute o comando `ng e2e` para rodar os testes End To End via [Protractor](http://www.protractortest.org/).
 
-<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/e2e_2.png">
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/e2e_3.png">
