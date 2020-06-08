@@ -1,14 +1,12 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Suíte - AppComponent', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
-
-  //page.navigateTo();
 
   it(`Dado que tela inicial.
   Quando for carregada

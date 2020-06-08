@@ -2,8 +2,8 @@
   <h3>Produtos</h3>
   <div class="c-card-content">
     <ui-loading [isVisible]="isServiceWorking"></ui-loading>
-    <ul>
-      <li *ngFor="let item of products">
+    <ul class="list-products">
+      <li *ngFor="let item of products" id="item-{{item.productType}}">
         {{item.productType}} - {{item.productName}}
       </li>
     </ul>
