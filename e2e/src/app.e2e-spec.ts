@@ -8,9 +8,34 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  //page.navigateTo();
+
+  it(`Dado que tela inicial.
+  Quando for carregada
+  então o page title contido no header deve conter o texto "dojo".`, () => {
+    page.navigateTo();
+    expect(page.getTitlePage()).toEqual('dojo');
+  });
+
+  it(`Dado que tela inicial.
+  Quando for carregada
+  então o aside de navegação deve conter o link para acesso à página Home.`, () => {
     page.navigateTo();
     expect(page.getLinkHome()).toEqual('home Home');
+  });
+
+  it(`Dado que tela inicial.
+  Quando for carregada
+  então o aside de navegação deve conter o link para acesso à página Products.`, () => {
+    page.navigateTo();
+    expect(page.getLinkProducts()).toEqual('list Products');
+  });
+
+  it(`Dado que tela inicial.
+  Quando for carregada
+  então o aside de navegação deve conter o link para acesso à página de Employees.`, () => {
+    page.navigateTo();
+    expect(page.getLinkEmployees()).toEqual('accessibility_new Employees');
   });
 
   afterEach(async () => {

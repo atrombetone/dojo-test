@@ -1,5 +1,5 @@
 <div class="wrapper-layout">
-  <header>{{title}}</header>
+  <header id="title-page">{{title}}</header>
   <main>
     <router-outlet></router-outlet>
   </main>
@@ -13,14 +13,14 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/products']" routerLinkActive="routerLinkActive">
+        <a [routerLink]="['/products']" routerLinkActive="routerLinkActive" id="lnk-products">
           <span class="material-icons">
             list
           </span> Products
         </a>
       </li>
       <li>
-        <a [routerLink]="['/employees']" routerLinkActive="routerLinkActive">
+        <a [routerLink]="['/employees']" routerLinkActive="routerLinkActive" id="lnk-employees">
           <span class="material-icons">
             accessibility_new
           </span> Employees

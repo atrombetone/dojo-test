@@ -5,11 +5,23 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
+  getTitlePage() {
+    return element(by.id('title-page')).getText() as Promise<string>;
   }
 
   getLinkHome() {
     return element(by.id('lnk-home')).getText() as Promise<string>;
+  }
+
+  getLinkProducts() {
+    return element(by.id('lnk-products')).getText() as Promise<string>;
+  }
+
+  getLinkEmployees() {
+    return element(by.id('lnk-employees')).getText() as Promise<string>;
+  }
+
+  getFooterContent() {
+    return element(by.name('footer')).getText() as Promise<string>;
   }
 }
