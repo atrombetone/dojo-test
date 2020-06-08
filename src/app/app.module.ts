@@ -8,6 +8,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoadingComponent } from './components/loading/loading.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

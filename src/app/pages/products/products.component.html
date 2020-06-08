@@ -1,6 +1,11 @@
 <div class="c-card">
   <h3>Produtos</h3>
   <div class="c-card-content">
-    
+    <ui-loading [isVisible]="isServiceWorking"></ui-loading>
+    <ul>
+      <li *ngFor="let item of products">
+        {{item.productType}} - {{item.productName}}
+      </li>
+    </ul>
   </div>
 </div>

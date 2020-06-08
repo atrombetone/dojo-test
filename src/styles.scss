@@ -65,12 +65,10 @@ $cl-box-shadow: #B4B4B4;
 		font-weight: bold;
 		font-size: 20px;
 	}
-	div {
+	
+	.c-card-content {
 		border-top: solid thin #ccc;
 		padding: 5px;
-	}
-
-	.c-card-content {
 		line-height: 25px;
 		letter-spacing: 0.5px;
 	}

@@ -21,8 +21,17 @@ em seguida volte ao navegador na aplicação http://localhost:4200
 ## ScreenShots
 <table>
     <tr>
-        <td><img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/home.png" /></td>
-        <td><img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/products.png" /></td>
+        <td colspan="2">
+            <img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/home_00.png" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/products_00.png" />
+        </td>
+        <td>
+            <img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/products_01.png" />
+        </td>
     </tr>
 </table>
 
@@ -31,8 +40,8 @@ em seguida volte ao navegador na aplicação http://localhost:4200
 Execute o comando `ng test` para rodar os testes unitários via [Karma](https://karma-runner.github.io).
 
 Uma segunda opção para obter mais detalhes pode ser utilizado o comando `ng test --code-coverage`, dessa forma é gerado um diretório chamado `coverage` na raiz do projeto contendo um relatório detalhado em HTML mostrando o resultado da cobertura.
-
-<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/cobertura_13.png">
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/karma_01.png">
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/coverage_01.png">
 
 ## Teste End To End (E2E)
 
