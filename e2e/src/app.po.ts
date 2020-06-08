@@ -5,11 +5,11 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getApp() {
-    return element(by.css('app-root')).getText() as Promise<string>;
+  getTitleText() {
+    return element(by.css('app-root h1')).getText() as Promise<string>;
   }
 
-  getAppVersion() {
-    return element(by.css('app-root')).getAttribute('ng-version') as Promise<string>
+  getLinkHome() {
+    return element(by.id('lnk-home')).getText() as Promise<string>;
   }
 }

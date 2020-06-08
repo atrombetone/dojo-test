@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Roboto, monospace';
 }
 ol, ul {
 	list-style: none;
@@ -45,4 +46,36 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/* Vars */
+$cl-box-shadow: #B4B4B4;
+
+/* Classes Comuns da aplicação */
+.c-card {
+	background-color: #fff;
+	border-radius: 4px;
+	width: 100%;
+	box-shadow: -1px -1px 5px $cl-box-shadow, 3px 3px 5px $cl-box-shadow;
+	-webkit-box-shadow: -1px -1px 5px $cl-box-shadow, 3px 3px 5px $cl-box-shadow;
+	-moz-box-shadow: -1px -1px 5px $cl-box-shadow, 3px 3px 5px $cl-box-shadow;
+
+	h3 {
+		padding: 4px 10px;
+		line-height: 40px;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	div {
+		border-top: solid thin #ccc;
+		padding: 5px;
+	}
+
+	.c-card-content {
+		line-height: 25px;
+		letter-spacing: 0.5px;
+	}
+
+	.c-card-actions {
+		padding: 15px 20px;
+	}
 }

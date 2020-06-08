@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { MaterialModule } from './material-module';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +14,10 @@ import { MaterialModule } from './material-module';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  routerLinkActive: string;
-  
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  title = 'dojo';
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  routerLinkActive: string;
+
+  constructor() {}
+
 }

@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
+
 import { ProductService } from './product.service';
-import { ProductModel } from '../models/product.model';
 
 describe('ProductService', () => {
-
   const MockHttpValidReturn = [
     {
       "productType": "100",

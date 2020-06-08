@@ -1,51 +1,33 @@
-<mat-sidenav-container class="sidenav-container" id="ui-menu">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Pedidos</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="['/home']" routerLinkActive="routerLinkActive" id="lnk-home">
-        <span class="material-icons">
-          home
-        </span> Home</a>
-        <a mat-list-item [routerLink]="['/products']" routerLinkActive="routerLinkActive" id="lnk-products">
+<div class="wrapper-layout">
+  <header>{{title}}</header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <aside>
+    <ul class="c-navbar">
+      <li>
+        <a [routerLink]="['/home']" routerLinkActive="routerLinkActive" id="lnk-home">
+          <span class="material-icons">
+            home
+          </span> Home
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/products']" routerLinkActive="routerLinkActive">
           <span class="material-icons">
             list
-          </span> Products</a>
-      <!-- <a mat-list-item [routerLink]="['/benefities']" routerLinkActive="routerLinkActive" >
-        <span class="material-icons">
-          bookmarks
-        </span> Benefities</a>
-      <a mat-list-item  [routerLink]="['/branches']" routerLinkActive="routerLinkActive" >
-        <span class="material-icons">
-          backup_table
-        </span>Branches</a>
-      <a mat-list-item  [routerLink]="['/employees']" routerLinkActive="routerLinkActive" >
-        <span class="material-icons">
-          accessibility_new
-        </span> Employees</a>
-      <a mat-list-item  [routerLink]="['/orders']" routerLinkActive="routerLinkActive" >
-        <span class="material-icons">
-          attach_money
-        </span>Orders</a> -->
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>dojo</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <div class="outlet-container">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+          </span> Products
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/employees']" routerLinkActive="routerLinkActive">
+          <span class="material-icons">
+            accessibility_new
+          </span> Employees
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <footer><p>&copy; 2020 Atrombetone - Dojo Testes unitários e E2E<p></p></footer>
+</div>
+
