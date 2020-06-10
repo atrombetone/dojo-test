@@ -48,3 +48,43 @@ Uma segunda opção para obter mais detalhes pode ser utilizado o comando `ng te
 Execute o comando `ng e2e` para rodar os testes End To End via [Protractor](http://www.protractortest.org/).
 
 <img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/e2e_3.png">
+
+## Teste de Mutação 
+
+### Requisitos
+
+É necessário instalar a ferramenta de linha de comando (stryker-cli), para isso utilize o comando a seguir:
+
+$ npm install -g stryker-cli
+
+### Execução
+
+Execute o comando `npm run mutation` para rodar os testes de mutação via [Stryker](https://stryker-mutator.io/).
+
+### Teste de Mutação - O que são? Onde vivem? Do que se alimentam?
+
+Teste de mutação é um componente que pode ser conectado à um projeto, sua função é escanear os testes unitários contidos no projeto e realizar mutações nos asserts/expects modificando o valor esperado a fim de fazer com o teste falhe.
+
+Na home page do projeto há uma breve explicação de como isso é feito. Imagine o método a seguir:
+```javascript
+function isUserOldEnough(user) {
+  return user.age >= 18;
+}
+```
+O Stryker avalia o código e gera possíveis combinações de resultado da seguinte forma:
+```javascript
+/* 1 */ return user.age > 18;
+/* 2 */ return user.age < 18;
+/* 3 */ return false;
+/* 4 */ return true;
+```
+
+Com esses possivéis retornos são criados, os denominados "Mutantes" neste modelo de teste.
+Após essa etápa os mutantes são correlacionados aos seus respectivos testes unitários, quando o mutante é aplicado em um teste unitário e o teste falha, diz-se que o mutante foi abatido indicando que o teste unitário está coerente ao que se propôem. Quando o mutante é aplicado ao teste unitário e o teste não quebra, denomina-se que o mutante sobreviveu e este mutante vai para lista de sobreviventes.
+Para que um teste unitário tenha sucesso pelo menos um mutante deve ser abatido, caso todos os mutantes sobrevivam o teste unitário é reprovado no quisito de "Teste de Mutação"
+
+Tendo a vista este projeto, veja que ele obteve 100% de cobertura no testes unitários, veja o resultado dos testes de mutação:
+
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/mutation_01.png">
+
+
