@@ -87,4 +87,6 @@ Tendo a vista este projeto, veja que ele obteve 100% de cobertura no testes unit
 
 <img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/mutation_01.png">
 
+<img src="https://github.com/atrombetone/dojo-test/blob/master/screenshots/mutation_02.png">
+
 
